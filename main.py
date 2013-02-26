@@ -24,6 +24,7 @@ class MainHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/ps1', problem1.PSOneHandler),
-    ('/u2', unit2.UnitTwoHandler)
+    problem1.main,
+    unit2.main,
+    unit2.testform
 ], debug=True)
