@@ -29,7 +29,8 @@ class MainHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     problem1.main,
-    problem2.main,
+    problem2.rot13page,
+    problem2.signuppage,
     unit2.main,
     unit2.testform,
     unit2.validation,

@@ -13,7 +13,7 @@ Preserve case, white space and punctuation. Re-submitting text should
 bring us back to normal. Input text should be escaped.
 """
 
-form="""
+rot13form="""
 <h1>ROT13 some text!</h1>
 <br>
 <form method="post">
@@ -37,7 +37,7 @@ def rot13(s):
 
 class ROT13Handler(webapp2.RequestHandler):
     def write_form(self, rotten=""):
-        self.response.out.write(form % { "rotten" : rotten })
+        self.response.out.write(rot13form % { "rotten" : rotten })
 
     def get(self):
         self.write_form()
@@ -46,4 +46,9 @@ class ROT13Handler(webapp2.RequestHandler):
         user_rotten = cgi.escape( user_rotten, quote = True )
         self.write_form(user_rotten)
 
-main=('/ps2', ROT13Handler)
+rot13page=('/ps2/rot13', ROT13Handler)
+
+
+class SignupHandler(webapp2.RequestHandler):
+
+signuppage=('/ps2/signup', SignupHandler)
