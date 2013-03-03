@@ -18,6 +18,7 @@ import sys
 import webapp2
 sys.path.append('problem_sets')
 import problem1
+import problem2
 sys.path.append('units')
 import unit2
 
@@ -28,6 +29,7 @@ class MainHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     problem1.main,
+    problem2.main,
     unit2.main,
     unit2.testform,
     unit2.validation,
