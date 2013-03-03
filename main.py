@@ -30,5 +30,8 @@ app = webapp2.WSGIApplication([
     problem1.main,
     unit2.main,
     unit2.testform,
-    unit2.validation
+    unit2.validation,
+    unit2.validateescape,
+    unit2.redirection_start,
+    unit2.redirection_end
 ], debug=True)
